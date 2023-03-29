@@ -64,7 +64,7 @@ Jalankan Development NPM, untuk kebutuhan Development
   npm run dev
 ```
 
-Tambah terminal baru di VSCode,lalu jalankan server artisan
+Jangan close npm run dev, Tambah terminal baru di VSCode,lalu jalankan server artisan
 
 ```bash
   php artisan serve
