@@ -1,7 +1,7 @@
 
 # PPDB SMK GUNUNG KIDUL
 
-A brief description of what this project does and who it's for
+Dokumentasi Kalem for Project PPDB.
 
 
 ## Minimum Requirements
