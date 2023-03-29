@@ -80,5 +80,5 @@ http://localhost:8000/
 
 **Client:** Bootstrap 5, Livewire, HTML, Javascript, Jquery
 
-**Server:** PHP, Laravel
+**Server:** PHP8.1, Laravel 10
 
