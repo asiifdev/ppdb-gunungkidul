@@ -46,7 +46,7 @@ Install Package2 yang dibutuhkan dengan Composer
     
 ## Run Locally
 
-Migratasi Database beserta menjalankan Seeder
+Migrasi Database beserta jalankan Seeder
 
 ```bash
   php artisan migrate:fresh --seed
@@ -64,21 +64,21 @@ Jalankan Development NPM, untuk kebutuhan Development
   npm run dev
 ```
 
-Tambah terminal baru di VSCode,lalu jalankan server artisan
+Jangan close npm run dev, Tambah terminal baru di VSCode,lalu jalankan server artisan
 
 ```bash
   php artisan serve
 ```
 
 
-## Demo
+## Akses
 
-Link Web setelah menjalankan Command artisan serve
+Setelah menjalankan Command artisan serve,buka browser jalankan
 
 http://localhost:8000/
 ## Tech Stack
 
-**Client:** Bootstrap 5, Livewire, HTML, Javascript
+**Client:** Bootstrap 5, Livewire, HTML, Javascript, Jquery
 
-**Server:** PHP, Laravel
+**Server:** PHP8.1, Laravel 10
 
