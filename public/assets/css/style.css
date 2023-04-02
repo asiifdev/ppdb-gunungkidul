@@ -1583,7 +1583,7 @@ select.form-control option[value=""][disabled] {
 
     .wizard-progress {
         float: none;
-        margin-top: 20px;
+        margin-top: -22px;
     }
 
     .inner {

@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
         $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@mail.com',
-            'password' => bcrypt('10032023'),
+            'password' => bcrypt('admin'),
             'nik' => 1919191919191919,
             'photo' => 'https://ui-avatars.com/api/?name=admin&background=random',
         ]);

@@ -12,11 +12,11 @@ class KelurahanController extends Controller
     public function updateKelurahan(){
         $kecamatan = Kecamatan::all();
         foreach($kecamatan as $k){
-            // $url = "https://api.goapi.id/v1/regional/kelurahan?kecamatan_id=" . substr_replace(substr_replace($k->id, ".", 2,0),".",5,0) ."&api_key=EfcQ9DyDcjEhLGc1mQ0oTFpM9NyxC0&";
-            $url = "https://api.goapi.id/v1/regional/kelurahan?kecamatan_id=92.71.11&api_key=EfcQ9DyDcjEhLGc1mQ0oTFpM9NyxC0&";
+            $url = "https://api.goapi.id/v1/regional/kelurahan?kecamatan_id=" . substr_replace(substr_replace($k->id, ".", 2,0),".",5,0) ."&api_key=EfcQ9DyDcjEhLGc1mQ0oTFpM9NyxC0&";
+            // $url = "https://api.goapi.id/v1/regional/kelurahan?kecamatan_id=92.71.11&api_key=EfcQ9DyDcjEhLGc1mQ0oTFpM9NyxC0&";
             $data = Http::get($url)->object()->data;
             foreach($data as $d){
-                dd(str_replace('.','',$d->id));
+                // dd(str_replace('.','',$d->id));
                 $cek = Kelurahan::find(str_replace('.','',$d->id));
                 if($cek != NULL){
                     $dt_update = [];

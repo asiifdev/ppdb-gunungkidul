@@ -99,15 +99,15 @@ class Registration extends Component
         $this->provinsi = Provinsi::all();
         $this->sekolah = DataSekolah::all();
         $this->jurusan = Jurusan::all();
-        if($this->idprovinsi != ''){
-            $this->kabupaten = Kabupaten::where('province_id',$this->idprovinsi)->get();
-        }
-        if($this->idkabupaten != ''){
-            $this->kecamatan = Kecamatan::where('regency_id',$this->idkabupaten)->get();
-        }
-        if($this->idkecamatan != ''){
-            $this->kelurahan = Kelurahan::where('district_id',$this->idkecamatan)->get();
-        }
+        // if($this->idprovinsi != ''){
+        //     $this->kabupaten = Kabupaten::where('province_id',$this->idprovinsi)->get();
+        // }
+        // if($this->idkabupaten != ''){
+        //     $this->kecamatan = Kecamatan::where('regency_id',$this->idkabupaten)->get();
+        // }
+        // if($this->idkecamatan != ''){
+        //     $this->kelurahan = Kelurahan::where('district_id',$this->idkecamatan)->get();
+        // }
     }
 
     public function form(){

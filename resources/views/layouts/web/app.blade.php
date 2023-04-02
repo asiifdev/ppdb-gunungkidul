@@ -90,8 +90,31 @@
             background: #00A759 !important;
             color: white !important;
         }
-        .error{
+
+        .error {
             font-size: 20px;
+        }
+
+        .air-datepicker-body--day-name {
+            color: #00A759 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: .8em;
+        }
+
+        .air-datepicker-cell:hover {
+            background-color: #00A759 !important;
+            color: #fff !important;
+        }
+        
+        .air-datepicker-cell.-selected-,
+        .air-datepicker-cell.-selected-.-current- {
+            background-color: #00A759 !important;
+            color: #fff;
         }
     </style>
     @livewireStyles
@@ -162,15 +185,15 @@
 
                         <div class="multisteps-form__progress-btn">
                             <div class="text-center">
-                                <i class="fa fa-recycle icon-form"></i>
-                                <p>Pilih Jalur Pendaftaran </p>
+                                <i class="fa fa-check icon-form"></i>
+                                <p>Selesai </p>
                             </div>
                             <div style="font-size: 40px;" class="responsive_ket text-center">
-                                <i class="fa fa-recycle"></i>
-                                <p style="font-size: 14px;">Pilih Jalur Pendaftaran </p>
+                                <i class="fa fa-check"></i>
+                                <p style="font-size: 14px;">Selesai </p>
                             </div>
                         </div>
-                        
+
                         {{-- <button class="multisteps-form__progress-btn">Review </button> --}}
                     </div>
                 </div>
@@ -184,7 +207,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <script src="{{ asset('assets/js/jquery-3.3.1.min.js') . '?version=' . version() }}"></script>
     {{-- DATE PICKER --}}
@@ -211,69 +233,6 @@
         });
     </script>
     <script>
-        // $('#provinsi').change(function(e) {
-        //     e.preventDefault();
-        //     var id = $('#provinsi').val();
-        //     $('#kabupaten').empty();
-        //     $('#kecamatan').empty();
-        //     $('#kelurahan').empty();
-        //     if (id != "") {
-        //         var url = "{{ url('kabupaten/') }}" + "/" + id
-        //         $.ajax({
-        //             type: "GET",
-        //             url: url,
-        //             success: function(response) {
-        //                 $.each(response, function(index, val) {
-        //                     // console.log(val)
-        //                     $('#kabupaten').append("<option value='" + val.id + "'>" + val
-        //                         .name +
-        //                         "</option>");
-        //                 });
-        //                 $('#kabupaten').trigger('change');
-        //             }
-        //         });
-        //     }
-        // });
-        // $('#kabupaten').change(function(e) {
-        //     e.preventDefault();
-        //     var id = $('#kabupaten').val();
-        //     var url = "{{ url('kecamatan/') }}" + "/" + id
-        //     console.log(id)
-        //     $('#kecamatan').empty();
-        //     $.ajax({
-        //         type: "GET",
-        //         url: url,
-        //         success: function(response) {
-        //             $.each(response, function(index, val) {
-        //                 $('#kecamatan').append(
-        //                     "<option value='" +
-        //                     val.id + "'>" + val
-        //                     .name + "</option>")
-        //             });
-        //             $('#kecamatan').trigger('change');
-        //         }
-        //     });
-        // });
-        // $('#kecamatan').change(function(e) {
-        //     e.preventDefault();
-        //     var id = $('#kecamatan').val();
-        //     var url = "{{ url('kelurahan/') }}" + "/" + id
-        //     console.log(id)
-        //     $('#kelurahan').empty();
-        //     $.ajax({
-        //         type: "GET",
-        //         url: url,
-        //         success: function(response) {
-        //             $.each(response, function(index, val) {
-        //                 $('#kelurahan').append(
-        //                     "<option value='" +
-        //                     val.id + "'>" + val
-        //                     .name + "</option>")
-        //             });
-        //             $('#kelurahan').trigger('change');
-        //         }
-        //     });
-        // });
         $('#sekolah').change(function(e) {
             e.preventDefault();
             var id = $('#sekolah').val();
@@ -296,7 +255,7 @@
 
         window.addEventListener('nextForm', event => {
             var page = event.detail;
-            $('.multisteps-form__progress-btn:nth-child('+page+')').click()
+            $('.multisteps-form__progress-btn:nth-child(' + page + ')').click()
         })
         window.addEventListener('gagal', event => {
             $('.multisteps-form__progress-btn:nth-child(1)').click()
